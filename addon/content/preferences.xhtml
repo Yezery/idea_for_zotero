@@ -1,0 +1,132 @@
+<linkset>
+  <html:link rel="localization" href="__addonRef__-preferences.ftl" />
+</linkset>
+<html:style>
+  .ideaforzotero-settings { max-width: 680px; margin: 16px; padding: 18px; }
+  .ideaforzotero-heading, .ideaforzotero-actions { gap: 10px; }
+  .ideaforzotero-logo { width: 42px; height: 42px; } .ideaforzotero-heading h2 {
+  margin: 0 0 3px; } .ideaforzotero-form { display: grid; grid-template-columns:
+  110px minmax(180px, 1fr) 72px; gap: 10px 12px; align-items: center; }
+  .ideaforzotero-form input, .ideaforzotero-form select, .ideaforzotero-form
+  textarea { width: 100%; box-sizing: border-box; } .ideaforzotero-form textarea
+  { min-height: 58px; resize: vertical; } .ideaforzotero-prompt-title { margin:
+  20px 0 8px; font-weight: 600; } .ideaforzotero-actions { margin-top: 16px; }
+  .ideaforzotero-help { display: block; margin-top: 12px; color: #666; }
+</html:style>
+<groupbox
+  class="ideaforzotero-settings"
+  onload="Zotero.__addonInstance__.hooks.onPrefsEvent('load', { window })"
+>
+  <hbox class="ideaforzotero-heading" align="center">
+    <image
+      class="ideaforzotero-logo"
+      src="chrome://__addonRef__/content/icons/favicon.png"
+    />
+    <vbox>
+      <html:h2 data-l10n-id="pref-title"></html:h2>
+      <description data-l10n-id="pref-description"></description>
+    </vbox>
+  </hbox>
+  <separator class="thin" />
+  <html:div class="ideaforzotero-form">
+    <html:label
+      for="zotero-prefpane-__addonRef__-endpoint"
+      data-l10n-id="pref-endpoint"
+    ></html:label>
+    <html:input
+      type="url"
+      id="zotero-prefpane-__addonRef__-endpoint"
+      preference="aiEndpoint"
+      placeholder="https://api.openai.com/v1"
+    />
+    <html:span></html:span>
+    <html:label
+      for="zotero-prefpane-__addonRef__-api-key"
+      data-l10n-id="pref-api-key"
+    ></html:label>
+    <html:input
+      type="password"
+      id="zotero-prefpane-__addonRef__-api-key"
+      preference="aiApiKey"
+      placeholder="sk-..."
+    />
+    <html:span></html:span>
+    <html:label
+      for="zotero-prefpane-__addonRef__-model"
+      data-l10n-id="pref-model"
+    ></html:label>
+    <menulist id="zotero-prefpane-__addonRef__-model" preference="aiModel">
+      <menupopup id="zotero-prefpane-__addonRef__-model-options">
+        <menuitem value="gpt-4o-mini" label="gpt-4o-mini" />
+      </menupopup>
+    </menulist>
+    <html:span></html:span>
+  </html:div>
+  <html:div
+    class="ideaforzotero-prompt-title"
+    data-l10n-id="pref-prompts-title"
+  ></html:div>
+  <html:div class="ideaforzotero-form">
+    <html:label
+      for="zotero-prefpane-__addonRef__-insufficient-prompt"
+      data-l10n-id="pref-insufficient-prompt"
+    ></html:label>
+    <html:textarea
+      id="zotero-prefpane-__addonRef__-insufficient-prompt"
+      preference="insufficientPrompt"
+    ></html:textarea>
+    <html:input
+      type="number"
+      min="1"
+      max="500"
+      id="zotero-prefpane-__addonRef__-insufficient-length"
+      preference="insufficientLength"
+      data-l10n-id="pref-length"
+    />
+    <html:label
+      for="zotero-prefpane-__addonRef__-idea-prompt"
+      data-l10n-id="pref-idea-prompt"
+    ></html:label>
+    <html:textarea
+      id="zotero-prefpane-__addonRef__-idea-prompt"
+      preference="ideaPrompt"
+    ></html:textarea>
+    <html:input
+      type="number"
+      min="1"
+      max="500"
+      id="zotero-prefpane-__addonRef__-idea-length"
+      preference="ideaLength"
+      data-l10n-id="pref-length"
+    />
+    <html:label
+      for="zotero-prefpane-__addonRef__-note-prompt"
+      data-l10n-id="pref-note-prompt"
+    ></html:label>
+    <html:textarea
+      id="zotero-prefpane-__addonRef__-note-prompt"
+      preference="notePrompt"
+    ></html:textarea>
+    <html:input
+      type="number"
+      min="1"
+      max="500"
+      id="zotero-prefpane-__addonRef__-note-length"
+      preference="noteLength"
+      data-l10n-id="pref-length"
+    />
+  </html:div>
+  <hbox class="ideaforzotero-actions" align="center">
+    <button
+      id="__addonRef__-test-connection"
+      data-l10n-id="pref-test-connection"
+    />
+    <button id="__addonRef__-load-models" data-l10n-id="pref-load-models" />
+    <spacer flex="1" />
+    <description id="__addonRef__-connection-status" />
+  </hbox>
+  <description
+    class="ideaforzotero-help"
+    data-l10n-id="pref-help"
+  ></description>
+</groupbox>

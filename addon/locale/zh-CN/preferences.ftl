@@ -1,0 +1,13 @@
+pref-title = Idea for Zotero
+pref-description = 连接兼容 OpenAI 的 AI 服务，提取文献中作者陈述的不足并生成研究 Idea。
+pref-endpoint = API 地址
+pref-api-key = API 密钥
+pref-model = 模型
+pref-prompts-title = 生成提示词
+pref-insufficient-prompt = Insufficient 提示词
+pref-idea-prompt = Idea 提示词
+pref-note-prompt = 论文简记提示词
+pref-length = 字数上限
+pref-test-connection = 测试连接
+pref-load-models = 获取模型列表
+pref-help = 密钥仅保存在当前 Zotero 配置文件中。提示词会与文章文本一起发送给 AI；长度要求由插件统一控制。

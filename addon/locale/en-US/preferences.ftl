@@ -1,0 +1,13 @@
+pref-title = Idea for Zotero
+pref-description = Connect an OpenAI-compatible AI service to extract stated limitations and generate research ideas.
+pref-endpoint = API endpoint
+pref-api-key = API key
+pref-model = Model
+pref-prompts-title = Generation prompts
+pref-insufficient-prompt = Insufficient prompt
+pref-idea-prompt = Idea prompt
+pref-note-prompt = Paper note prompt
+pref-length = Length limit
+pref-test-connection = Test connection
+pref-load-models = Load models
+pref-help = The key is stored only in the current Zotero profile. Prompts are sent with the article text; the plugin enforces the length targets.

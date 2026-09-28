@@ -1,0 +1,43 @@
+.ideaforzotero-settings {
+  max-width: 680px;
+  margin: 16px;
+  padding: 18px;
+}
+
+.ideaforzotero-heading {
+  gap: 12px;
+}
+
+.ideaforzotero-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.ideaforzotero-heading h2 {
+  margin: 0 0 3px;
+}
+
+.ideaforzotero-form {
+  display: grid;
+  grid-template-columns: 110px minmax(260px, 1fr);
+  gap: 10px 12px;
+  align-items: center;
+}
+
+.ideaforzotero-form input,
+.ideaforzotero-form select {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ideaforzotero-actions {
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.ideaforzotero-help {
+  display: block;
+  margin-top: 12px;
+  color: var(--fill-secondary, #666);
+}

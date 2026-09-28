@@ -1,0 +1,9 @@
+pref("aiEndpoint", "https://api.openai.com/v1");
+pref("aiApiKey", "");
+pref("aiModel", "gpt-5.6-Terra");
+pref("insufficientPrompt", "总结论文中陈述的研究不足之处");
+pref("ideaPrompt", "针对论文陈述的不足，列出一个富有创新的想法");
+pref("notePrompt", "用一小段话概括论文的主要内容，重点介绍创新点");
+pref("insufficientLength", 50);
+pref("ideaLength", 50);
+pref("noteLength", 50);
